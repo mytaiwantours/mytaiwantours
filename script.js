@@ -53,7 +53,7 @@ document.getElementById("contactForm").addEventListener(
       "Opening your email app to send your inquiry...";
 
     const mailto =
-      "mailto:YOUR-EMAIL@example.com" +
+      "mailto:mytouringservices@gmail.com" +
       "?subject=" + encodeURIComponent(subject) +
       "&body=" + encodeURIComponent(body);
 
