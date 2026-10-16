@@ -1,30 +1,149 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>M.Y. Taiwan Tours</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      text-align: center;
-      padding: 60px 20px;
-      background: #f4f7fb;
-      color: #222;
-    }
-
-    h1 {
-      color: #2563eb;
-    }
-
-    a {
-      color: #2563eb;
-    }
-  </style>
+  <title>M.Y. Taiwan Tours | Discover Taiwan</title>
+  <meta name="description" content="Discover Taiwan with M.Y. Taiwan Tours. Explore Taipei, Jiufen, Sun Moon Lake and more.">
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
 </head>
 <body>
-  <h1>M.Y. Taiwan Tours</h1>
-  <p>Welcome to M.Y. Taiwan Tours.</p>
-  <a href="https://github.com/">Visit GitHub</a>
+
+  <header>
+    <nav class="navbar">
+      <a href="#home" class="logo">M.Y. <span>Taiwan Tours</span></a>
+
+      <button class="menu-toggle" id="menuToggle"
+        aria-label="Toggle navigation" aria-expanded="false">
+        ☰
+      </button>
+
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#tours">Our Tours</a></li>
+        <li><a href="#about">About Us</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero" id="home">
+      <div class="hero-content">
+        <p class="eyebrow">YOUR TAIWAN ADVENTURE STARTS HERE</p>
+        <h1>Discover Taiwan,<br><span>Your Way.</span></h1>
+        <p>
+          Explore beautiful landscapes, vibrant cities,
+          local food and unforgettable cultural experiences.
+        </p>
+        <a href="#tours" class="btn">Explore Our Tours</a>
+      </div>
+    </section>
+
+    <section class="section" id="tours">
+      <div class="section-heading">
+        <p class="eyebrow">EXPLORE THE ISLAND</p>
+        <h2>Popular Destinations</h2>
+        <p>Experience the best of Taiwan with us.</p>
+      </div>
+
+      <div class="tour-grid">
+        <article class="tour-card">
+          <img
+            src="https://images.unsplash.com/photo-1470004914212-05527e49370b?auto=format&fit=crop&w=800&q=80"
+            alt="Mountain scenery in Taiwan"
+            loading="lazy">
+          <div class="tour-info">
+            <h3>Scenic Taiwan</h3>
+            <p>Discover breathtaking mountains, natural wonders and beautiful countryside.</p>
+            <a href="#contact" class="tour-link"
+              data-tour="Scenic Taiwan">Ask About This Tour →</a>
+          </div>
+        </article>
+
+        <article class="tour-card">
+          <img
+            src="https://images.unsplash.com/photo-1519501025264-65ba15a82390?auto=format&fit=crop&w=800&q=80"
+            alt="Bustling city skyline"
+            loading="lazy">
+          <div class="tour-info">
+            <h3>Taipei City Tour</h3>
+            <p>Explore city landmarks, night markets, shopping and delicious street food.</p>
+            <a href="#contact" class="tour-link"
+              data-tour="Taipei City Tour">Ask About This Tour →</a>
+          </div>
+        </article>
+
+        <article class="tour-card">
+          <img
+            src="https://images.unsplash.com/photo-1516483638261-f4dbaf036963?auto=format&fit=crop&w=800&q=80"
+            alt="Colorful traditional travel destination"
+            loading="lazy">
+          <div class="tour-info">
+            <h3>Culture & Heritage</h3>
+            <p>Visit charming old streets, traditional temples and local communities.</p>
+            <a href="#contact" class="tour-link"
+              data-tour="Culture & Heritage">Ask About This Tour →</a>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="about" id="about">
+      <div class="about-content">
+        <p class="eyebrow">TRAVEL WITH US</p>
+        <h2>Your Taiwan Journey, Made Special</h2>
+        <p>
+          At M.Y. Taiwan Tours, we help travelers discover
+          Taiwan's unique beauty, culture and hospitality.
+          Whether you love city adventures, scenic escapes
+          or local food, let's plan a memorable trip together.
+        </p>
+        <a href="#contact" class="btn">Plan Your Trip</a>
+      </div>
+    </section>
+
+    <section class="section contact" id="contact">
+      <div class="section-heading">
+        <p class="eyebrow">LET'S PLAN YOUR TRIP</p>
+        <h2>Contact Us</h2>
+        <p>Tell us what kind of Taiwan adventure you have in mind.</p>
+      </div>
+
+      <form id="contactForm">
+        <label for="name">Your Name</label>
+        <input type="text" id="name" name="name"
+          placeholder="Enter your name" required>
+
+        <label for="email">Email Address</label>
+        <input type="email" id="email" name="email"
+          placeholder="you@example.com" required>
+
+        <label for="tour">Interested In</label>
+        <select id="tour" name="tour" required>
+          <option value="">Choose a tour</option>
+          <option>Scenic Taiwan</option>
+          <option>Taipei City Tour</option>
+          <option>Culture & Heritage</option>
+          <option>Customized Private Tour</option>
+        </select>
+
+        <label for="message">Your Message</label>
+        <textarea id="message" name="message" rows="4"
+          placeholder="Tell us about your travel plans..." required></textarea>
+
+        <button type="submit" class="btn">Send Inquiry</button>
+        <p id="formMessage" class="form-message" aria-live="polite"></p>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <p>© <span id="year"></span> M.Y. Taiwan Tours. All rights reserved.</p>
+    <p>Discover Taiwan, Your Way.</p>
+  </footer>
+
 </body>
 </html>
