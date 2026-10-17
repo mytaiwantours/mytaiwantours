@@ -343,3 +343,83 @@ footer p + p {
 .menu-toggle {
   color: var(--primary-dark);
 }
+
+/* Brochure packages */
+.packages { background: #f6f4fa; }
+.packages .section-heading { max-width: 720px; margin-bottom: 36px; }
+.package-grid { max-width: 920px; margin: auto; border-top: 1px solid #d8d3e3; }
+.destination-group { border-bottom: 1px solid #d8d3e3; }
+.destination-summary { display: flex; align-items: center; gap: 20px; padding: 25px 8px; cursor: pointer; list-style: none; }
+.destination-summary::-webkit-details-marker { display: none; }
+.destination-name { color: var(--primary); font-size: 1.25rem; font-weight: 700; flex: 1; line-height: 1.4; }
+.destination-count { color: var(--muted); font-size: 0.9rem; white-space: nowrap; }
+.destination-icon { width: 26px; height: 26px; position: relative; flex-shrink: 0; color: var(--primary); }
+.destination-icon::before, .destination-icon::after { content: ''; position: absolute; background: currentColor; top: 12px; left: 6px; width: 14px; height: 2px; }
+.destination-icon::after { transform: rotate(90deg); }
+.destination-group[open] > summary .destination-icon::after { transform: rotate(0); }
+.destination-summary:hover { background: #eeebf5; }
+.destination-packages { padding: 0 24px 24px; }
+.package { border-top: 1px solid #e2ddea; }
+.package summary { cursor: pointer; padding: 17px 0; color: var(--text); font-weight: 600; line-height: 1.5; }
+.package summary::marker { color: var(--primary); }
+.package summary:hover { color: var(--primary); }
+.package-body { padding: 0 0 22px 20px; }
+.package-body ol { padding-left: 22px; margin: 0 0 18px; color: var(--muted); }
+.package-body li { padding: 3px 0 3px 5px; }
+.package-body li::marker { color: var(--primary); font-size: 0.85em; }
+.destination-summary:focus-visible, .package summary:focus-visible, .tour-link:focus-visible { outline: 2px solid var(--primary); outline-offset: 3px; border-radius: 3px; }
+.custom-package { max-width: 920px; margin: 36px auto 0; padding: 28px; border-radius: 8px; background: #e9e7f2; }
+.custom-package h3 { color: var(--primary); font-size: 1.3rem; }
+.custom-package p { color: var(--muted); margin: 10px 0 20px; max-width: 700px; }
+@media (max-width: 1050px) { .nav-links { gap: 18px; } }
+@media (max-width: 650px) {
+ .destination-summary { padding: 22px 0; gap: 12px; flex-wrap: wrap; }
+ .destination-name { font-size: 1.1rem; }
+ .destination-count { font-size: 0.8rem; }
+ .destination-packages { padding: 0 8px 12px; }
+ .custom-package { padding: 22px; }
+}
+
+/* Multi-page navigation and landing page */
+.nav-links a[aria-current="page"] { color: var(--primary-dark); border-bottom: 2px solid var(--primary); padding-bottom: 5px; font-weight: 700; }
+body { min-height: 100vh; display: flex; flex-direction: column; }
+main { flex: 1; }
+.home-links { max-width: 1100px; margin: auto; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 24px; }
+.home-links a { padding: 28px; background: #f9f7fc; border: 1px solid #d8d3e3; border-radius: 10px; }
+.home-links a:hover { background: #eee8f6; }
+.home-links h3 { color: var(--primary); margin-bottom: 10px; }
+.home-links p { color: var(--muted); }
+@media (max-width: 800px) { .home-links { grid-template-columns: 1fr; } }
+
+.contact-details { max-width: 920px; margin: 0 auto 48px; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 32px; padding-bottom: 36px; border-bottom: 1px solid #ccc5df; }
+.contact-details h3 { color: var(--primary); font-size: 1.25rem; margin-bottom: 14px; }
+.contact-details p { color: var(--muted); margin-bottom: 20px; }
+.contact-details dt { font-size: 0.8rem; color: var(--muted); margin-top: 16px; font-weight: 700; }
+.contact-details dd { margin: 3px 0 0; overflow-wrap: anywhere; }
+.contact-details a { color: var(--primary-dark); text-decoration: underline; text-underline-offset: 3px; }
+.contact-details a:hover { color: var(--primary); }
+@media (max-width: 650px) { .contact-details { grid-template-columns: 1fr; gap: 28px; } }
+
+.social-icons { display: flex; flex-wrap: wrap; align-items: flex-start; gap: 22px; margin-top: 22px; }
+.contact-details .social-icon-link { display: flex; flex-direction: column; align-items: center; gap: 8px; min-width: 48px; text-decoration: none; }
+.social-icon { display: grid; place-items: center; width: 48px; height: 48px; border-radius: 50%; background: #e8e3f3; color: var(--primary); }
+.social-icon svg { width: 24px; height: 24px; }
+.social-caption { font-size: 0.8rem; color: var(--muted); }
+.social-icon-link:hover .social-icon { background: var(--primary); color: white; }
+.social-icon-link:focus-visible { outline: 2px solid var(--primary); outline-offset: 5px; border-radius: 5px; }
+
+/* Refined brand wordmark */
+.logo { display: inline-flex; flex-direction: column; align-items: center; gap: 3px; line-height: 1; padding: 5px 0; white-space: nowrap; }
+.logo .brand-monogram { font-family: Georgia, 'Times New Roman', serif; font-size: 2.15rem; font-weight: 400; letter-spacing: 0.09em; color: var(--primary-dark); padding-left: 0.09em; }
+.logo .brand-name { color: var(--primary); font-size: 0.67rem; font-weight: 700; letter-spacing: 0.22em; text-transform: uppercase; padding: 8px 0 0 0.22em; border-top: 1px solid #d1c8e1; }
+.navbar { min-height: 96px; }
+.logo:focus-visible { outline: 2px solid var(--primary); outline-offset: 7px; border-radius: 2px; }
+@media (max-width: 800px) { .navbar { min-height: 90px; } .logo .brand-monogram { font-size: 1.95rem; } .logo .brand-name { font-size: 0.61rem; } }
+/* Single-line wordmark */
+.logo { flex-direction: row; align-items: baseline; gap: 10px; }
+.logo .brand-name { border-top: 0; padding: 0; font-size: 0.88rem; letter-spacing: 0.12em; }
+@media (max-width: 800px) { .logo { gap: 8px; } .logo .brand-name { font-size: 0.72rem; letter-spacing: 0.08em; } }
+/* Original typeface, unified brand color */
+.logo { display: inline-block; font-family: Arial, Helvetica, sans-serif; font-size: 1.4rem; font-weight: 800; color: var(--primary); line-height: 1.3; }
+.logo .brand-monogram, .logo .brand-name { font-family: inherit; font-size: inherit; font-weight: inherit; color: inherit; letter-spacing: normal; text-transform: none; padding: 0; border: 0; }
+.logo .brand-name { margin-left: 0.25em; }
