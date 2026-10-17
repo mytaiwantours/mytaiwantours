@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>M.Y. Taiwan Tours | Discover Taiwan</title>
+  <title>Discover Taiwan | M.Y. Taiwan Tours</title>
   <meta name="description" content="Discover Taiwan with M.Y. Taiwan Tours. Explore Taipei, Jiufen, Sun Moon Lake and more.">
   <link rel="stylesheet" href="style.css">
   <script src="script.js" defer></script>
@@ -13,7 +13,7 @@
 
   <header>
     <nav class="navbar">
-      <a href="#home" class="logo">M.Y. <span>Taiwan Tours</span></a>
+      <a href="index.html" class="logo" aria-label="M.Y. Taiwan Tours home"><span class="brand-monogram">M.Y.</span><span class="brand-name">Taiwan Tours</span></a>
 
       <button class="menu-toggle" id="menuToggle"
         aria-label="Toggle navigation" aria-expanded="false">
@@ -21,16 +21,17 @@
       </button>
 
       <ul class="nav-links" id="navLinks">
-        <li><a href="#home">Home</a></li>
-        <li><a href="#tours">Our Tours</a></li>
-        <li><a href="#about">About Us</a></li>
-        <li><a href="#contact">Contact</a></li>
+        <li><a href="index.html" aria-current="page">Home</a></li>
+        <li><a href="tours.html">Our Tours</a></li>
+        <li><a href="packages.html">Packages</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="contact.html">Contact</a></li>
       </ul>
     </nav>
   </header>
 
   <main>
-    <section class="hero" id="home">
+<section class="hero" id="home">
       <div class="hero-content">
         <p class="eyebrow">YOUR TAIWAN ADVENTURE STARTS HERE</p>
         <h1>Discover Taiwan,<br><span>Your Way.</span></h1>
@@ -38,11 +39,9 @@
           Explore beautiful landscapes, vibrant cities,
           local food and unforgettable cultural experiences.
         </p>
-        <a href="#tours" class="btn">Explore Our Tours</a>
+        <a href="tours.html" class="btn">Explore Our Tours</a>
       </div>
-    </section>
-
-    <section class="section" id="tours">
+    </section><section class="section" id="tours">
       <div class="section-heading">
         <p class="eyebrow">EXPLORE THE ISLAND</p>
         <h2>Popular Destinations</h2>
@@ -52,92 +51,42 @@
       <div class="tour-grid">
         <article class="tour-card">
           <img
-            src="https://images.unsplash.com/photo-1470004914212-05527e49370b?auto=format&fit=crop&w=800&q=80"
-            alt="Mountain scenery in Taiwan"
+            src="assets/north-coast.png"
+            alt="Lantern-lit teahouses in Jiufen at sunset"
             loading="lazy">
           <div class="tour-info">
             <h3>North Coast</h3>
             <p>Explore Yehliu Geopark, Shifen Sky Lantern, waterfalls and Jiufen Old Street.</p>
-            <a href="#contact" class="tour-link"
-              data-tour="North Coast">Ask About This Tour →</a>
+            <a href="contact.html?tour=North%20Coast" class="tour-link" data-tour="North Coast">Ask About This Tour →</a>
           </div>
         </article>
 
         <article class="tour-card">
           <img
-            src="https://images.unsplash.com/photo-1519501025264-65ba15a82390?auto=format&fit=crop&w=800&q=80"
-            alt="Bustling city skyline"
+            src="assets/taipei-city.png"
+            alt="Liberty Square gate in Taipei under a blue sky"
             loading="lazy">
           <div class="tour-info">
             <h3>Taipei City</h3>
             <p>Discover the National Palace Museum, Longshan Temple, Chiang Kai-shek Memorial Hall and Taipei 101.</p>
-            <a href="#contact" class="tour-link"
-              data-tour="Taipei City">Ask About This Tour →</a>
+            <a href="contact.html?tour=Taipei%20City" class="tour-link" data-tour="Taipei City">Ask About This Tour →</a>
           </div>
         </article>
 
         <article class="tour-card">
           <img
-            src="https://images.unsplash.com/photo-1516483638261-f4dbaf036963?auto=format&fit=crop&w=800&q=80"
-            alt="Colorful traditional travel destination"
+            src="assets/taichung.png"
+            alt="Colorful flower fields in Taichung"
             loading="lazy">
           <div class="tour-info">
             <h3>Taichung</h3>
             <p>Visit Green Fantasy Forest, Miyahara, Zhongshe Flower Farm and Gaomei Wetlands.</p>
-            <a href="#contact" class="tour-link"
-              data-tour="Taichung">Ask About This Tour →</a>
+            <a href="contact.html?tour=Taichung" class="tour-link" data-tour="Taichung">Ask About This Tour →</a>
           </div>
         </article>
       </div>
     </section>
-
-    <section class="about" id="about">
-      <div class="about-content">
-        <p class="eyebrow">TRAVEL WITH US</p>
-        <h2>Your Taiwan Journey, Made Special</h2>
-        <p>
-          At M.Y. Taiwan Tours, we help travelers discover
-          Taiwan's unique beauty, culture and hospitality.
-          Whether you love city adventures, scenic escapes
-          or local food, let's plan a memorable trip together.
-        </p>
-        <a href="#contact" class="btn">Plan Your Trip</a>
-      </div>
-    </section>
-
-    <section class="section contact" id="contact">
-      <div class="section-heading">
-        <p class="eyebrow">LET'S PLAN YOUR TRIP</p>
-        <h2>Contact Us</h2>
-        <p>Tell us what kind of Taiwan adventure you have in mind.</p>
-      </div>
-
-      <form id="contactForm">
-        <label for="name">Your Name</label>
-        <input type="text" id="name" name="name"
-          placeholder="Enter your name" required>
-
-        <label for="email">Email Address</label>
-        <input type="email" id="email" name="email"
-          placeholder="you@example.com" required>
-
-        <label for="tour">Interested In</label>
-        <select id="tour" name="tour" required>
-          <option value="">Choose a tour</option>
-          <option>Taipei City</option>
-          <option>North Coast</option>
-          <option>Taichung</option>
-          <option>Kaohsiung Tour</option>
-        </select>
-
-        <label for="message">Your Message</label>
-        <textarea id="message" name="message" rows="4"
-          placeholder="Tell us about your travel plans..." required></textarea>
-
-        <button type="submit" class="btn">Send Inquiry</button>
-        <p id="formMessage" class="form-message" aria-live="polite"></p>
-      </form>
-    </section>
+<section class="section home-overview"><div class="section-heading"><p class="eyebrow">DISCOVER MORE</p><h2>Plan Your Taiwan Adventure</h2><p>Find your destination, explore our packages, and tell us about your trip.</p></div><div class="home-links"><a href="tours.html"><h3>Our Tours →</h3><p>Start with North Coast, Taipei City, and Taichung.</p></a><a href="packages.html"><h3>All Packages →</h3><p>Explore 24 itineraries across 9 destinations.</p></a><a href="about.html"><h3>About Us →</h3><p>Get to know M.Y. Taiwan Tours.</p></a></div></section>
   </main>
 
   <footer>
