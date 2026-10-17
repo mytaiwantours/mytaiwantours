@@ -1,0 +1,87 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Our Tours | M.Y. Taiwan Tours</title>
+  <meta name="description" content="Discover Taiwan with M.Y. Taiwan Tours. Explore Taipei, Jiufen, Sun Moon Lake and more.">
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+
+  <header>
+    <nav class="navbar">
+      <a href="index.html" class="logo" aria-label="M.Y. Taiwan Tours home"><span class="brand-monogram">M.Y.</span><span class="brand-name">Taiwan Tours</span></a>
+
+      <button class="menu-toggle" id="menuToggle"
+        aria-label="Toggle navigation" aria-expanded="false">
+        ☰
+      </button>
+
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="tours.html" aria-current="page">Our Tours</a></li>
+        <li><a href="packages.html">Packages</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+<section class="section" id="tours">
+      <div class="section-heading">
+        <p class="eyebrow">EXPLORE THE ISLAND</p>
+        <h2>Popular Destinations</h2>
+        <p>Experience the best of Taiwan with us.</p>
+      </div>
+
+      <div class="tour-grid">
+        <article class="tour-card">
+          <img
+            src="assets/north-coast.png"
+            alt="Lantern-lit teahouses in Jiufen at sunset"
+            loading="lazy">
+          <div class="tour-info">
+            <h3>North Coast</h3>
+            <p>Explore Yehliu Geopark, Shifen Sky Lantern, waterfalls and Jiufen Old Street.</p>
+            <a href="contact.html?tour=North%20Coast" class="tour-link" data-tour="North Coast">Ask About This Tour →</a>
+          </div>
+        </article>
+
+        <article class="tour-card">
+          <img
+            src="assets/taipei-city.png"
+            alt="Liberty Square gate in Taipei under a blue sky"
+            loading="lazy">
+          <div class="tour-info">
+            <h3>Taipei City</h3>
+            <p>Discover the National Palace Museum, Longshan Temple, Chiang Kai-shek Memorial Hall and Taipei 101.</p>
+            <a href="contact.html?tour=Taipei%20City" class="tour-link" data-tour="Taipei City">Ask About This Tour →</a>
+          </div>
+        </article>
+
+        <article class="tour-card">
+          <img
+            src="assets/taichung.png"
+            alt="Colorful flower fields in Taichung"
+            loading="lazy">
+          <div class="tour-info">
+            <h3>Taichung</h3>
+            <p>Visit Green Fantasy Forest, Miyahara, Zhongshe Flower Farm and Gaomei Wetlands.</p>
+            <a href="contact.html?tour=Taichung" class="tour-link" data-tour="Taichung">Ask About This Tour →</a>
+          </div>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>© <span id="year"></span> M.Y. Taiwan Tours. All rights reserved.</p>
+    <p>Discover Taiwan, Your Way.</p>
+  </footer>
+
+</body>
+</html>
